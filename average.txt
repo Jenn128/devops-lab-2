@@ -13,8 +13,25 @@ int main() {
         scanf("%f", &value);
         sum += value; 
     }
+    if (i == 1) {
+            largest = smallest = value;
+        } else {
+            // Update largest and smallest values
+            if (value > largest) {
+                largest = value;
+            }
+            if (value < smallest) {
+                smallest = value;
+            }
+        }
+    }
 
     average = sum / n;
 
     printf("The average of the entered values is: %.2f\n", average);
+    printf("The largest value entered is: %.2f\n", largest);
+    printf("The smallest value entered is: %.2f\n", smallest);
+
+    return 0;
+
 }
